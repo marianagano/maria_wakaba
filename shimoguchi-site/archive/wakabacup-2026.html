@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第一回 WAKABA杯（2026.06.20）｜下口稚葉 オフィシャルサイト</title>
+  <meta name="description" content="2026年6月20日、テクノポート福井スタジアムにて開催された第一回WAKABA杯の特設ページ。小学生サッカー大会、エキシビジョンマッチ、ビンゴ大会、シモちゃんマンシールなど大会の内容を紹介します。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- 本体サイトと同じスタイルを読み込み、このページ専用の追記をします -->
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .cup-bar {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px clamp(24px, 6vw, 80px);
+      background: rgba(6,6,7,.9); backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    .cup-back { font-size: 13px; color: rgba(255,255,255,.8); letter-spacing: .04em; }
+    .cup-back:hover { color: var(--green); }
+    .cup-brand { font-family: "Oswald", sans-serif; font-weight: 700; font-size: 22px; letter-spacing: .16em; color: #fff; }
+    .cup-brand span { color: var(--green); }
+
+    .cup-wrap { max-width: 1000px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 80px); }
+
+    /* ヒーロー */
+    .cup-hero {
+      padding: 56px 0; display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      grid-template-areas: "title title" "meta poster";
+      column-gap: 40px; row-gap: 30px; align-items: end;
+    }
+    .cup-hero__title { grid-area: title; }
+    .cup-hero__meta { grid-area: meta; align-self: end; }
+    .cup-hero__poster { grid-area: poster; }
+    .cup-hero .eyebrow { color: var(--green); }
+    .cup-hero h1 {
+      font-family: "Anton", "Oswald", sans-serif; font-weight: 400;
+      font-size: clamp(38px, 6.2vw, 76px); line-height: 1.02; margin: 12px 0 0;
+      transform: skewX(-8deg); transform-origin: left; letter-spacing: .01em;
+      white-space: nowrap; text-align: left;
+    }
+    .cup-hero h1 .g { color: var(--green); }
+    .cup-hero__meta { color: rgba(255,255,255,.78); line-height: 2; font-size: 15px; }
+    .cup-hero__meta b { color: #fff; }
+    .cup-hero__poster { display: flex; gap: 20px; align-items: center; }
+    .cup-hero__poster figure { margin: 0; flex: 1; }
+    .cup-hero__poster img { width: 100%; display: block; filter: drop-shadow(0 14px 28px rgba(0,0,0,.55)); }
+
+    /* 内容リスト */
+    .cup-contents { padding: 30px 0 90px; border-top: 1px solid rgba(255,255,255,.1); }
+    .cup-contents .eyebrow { color: var(--green); }
+    .cup-contents h2 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; margin: 10px 0 40px; }
+    .cup-item {
+      display: grid; grid-template-columns: 88px 1fr; gap: 20px; align-items: start;
+      padding: 30px 0; border-top: 1px solid rgba(255,255,255,.14);
+    }
+    .cup-item:last-child { border-bottom: 1px solid rgba(255,255,255,.14); }
+    .cup-num { font-family: "Anton", sans-serif; font-size: 44px; color: var(--green); line-height: 1; }
+    .cup-item h3 { margin: 0 0 10px; font-size: clamp(18px, 2.6vw, 23px); color: #fff; font-weight: 700; }
+    .cup-item p { margin: 0; color: rgba(255,255,255,.72); font-size: 15px; line-height: 1.9; }
+    .cup-item .pop {
+      display: inline-block; margin-top: 12px; font-size: 12px; font-weight: 700; letter-spacing: .06em;
+      color: var(--lime-ink); background: var(--green); padding: 4px 14px; border-radius: 999px;
+    }
+    /* PRESENTED BY ラベル */
+    .cup-item .present { display: block; font-family: "Oswald", sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .18em; color: var(--green); margin-bottom: 6px; }
+    /* シールギャラリー */
+    .sticker-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 22px; max-width: 560px; }
+    .sticker-grid figure { margin: 0; }
+    .sticker-grid img { width: 100%; display: block; border-radius: 12px; border: 1px solid rgba(255,255,255,.14); background: #fff; transition: transform .2s ease; }
+    .sticker-grid figure:hover img { transform: translateY(-4px); }
+    .sticker-grid figcaption { margin-top: 8px; font-size: 12px; color: rgba(255,255,255,.62); text-align: center; letter-spacing: .02em; }
+    @media (max-width: 560px) { .sticker-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* 当日の様子ギャラリー */
+    .cup-gallery { padding: 36px 0 90px; border-top: 1px solid rgba(255,255,255,.1); }
+    .cup-gallery .eyebrow { color: var(--green); }
+    .cup-gallery h2 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; margin: 10px 0 30px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .gallery-grid a { display: block; overflow: hidden; border-radius: 12px; border: 1px solid rgba(255,255,255,.14); }
+    .gallery-grid img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; transition: transform .25s ease; }
+    .gallery-grid a:hover img { transform: scale(1.04); }
+    @media (max-width: 560px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .cup-foot { padding: 36px 0; border-top: 1px solid rgba(255,255,255,.1); text-align: center; }
+    .cup-foot a { color: var(--green); font-size: 14px; letter-spacing: .04em; }
+    .cup-foot small { display: block; margin-top: 16px; color: rgba(255,255,255,.45); font-size: 12px; }
+
+    @media (max-width: 820px) {
+      .cup-hero { grid-template-columns: 1fr; grid-template-areas: "title" "poster" "meta"; gap: 24px; align-items: start; }
+      .cup-hero h1 { white-space: normal; }
+    }
+    @media (max-width: 560px) {
+      .cup-item { grid-template-columns: 1fr; gap: 8px; }
+      .cup-num { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cup-bar">
+    <a href="../index.html" class="cup-back">← オフィシャルサイトへ戻る</a>
+    <span class="cup-brand">WAKABA<span>.</span></span>
+  </header>
+
+  <div class="cup-wrap">
+
+    <!-- ヒーロー -->
+    <section class="cup-hero">
+      <div class="cup-hero__title">
+        <span class="eyebrow">Archive — 2026.06.20</span>
+        <h1>第一回 <span class="g">WAKABA</span>杯</h1>
+      </div>
+      <p class="cup-hero__meta">
+        <b>日時</b>　2026年6月20日（土）<br>
+        <b>会場</b>　テクノポート福井スタジアム<br>
+        <b>主催</b>　株式会社WAKABA<br>
+        地元・福井を盛り上げた、記念すべき第1回大会。
+      </p>
+      <div class="cup-hero__poster">
+        <figure><img src="../images/uniform-front.png" alt="大会ユニフォーム 前面" /></figure>
+        <figure><img src="../images/uniform-back.png" alt="大会ユニフォーム 背面" /></figure>
+      </div>
+    </section>
+
+    <!-- 大会の内容 -->
+    <section class="cup-contents">
+      <span class="eyebrow">Contents</span>
+      <h2>大会の内容</h2>
+
+      <div class="cup-item">
+        <div class="cup-num">01</div>
+        <div>
+          <h3>小学生サッカー大会（U-10／U-12）</h3>
+          <p>福井県内外のジュニアチームが集結。U-10・U-12の2カテゴリで、未来の選手たちが熱戦を繰り広げました。</p>
+        </div>
+      </div>
+
+      <div class="cup-item">
+        <div class="cup-num">02</div>
+        <div>
+          <h3>エキシビジョンマッチ｜MVP選手 vs 大人チーム</h3>
+          <p>大会で選ばれたMVP選手たちと、下口稚葉率いる大人チームがガチンコ対決。子どもたちの憧れと本気がぶつかる、特別な一戦となりました。</p>
+        </div>
+      </div>
+
+      <div class="cup-item">
+        <div class="cup-num">03</div>
+        <div>
+          <h3>ビンゴ大会</h3>
+          <p>豪華景品をかけたお楽しみビンゴ大会で、会場全体が一体に。子どもも大人も大盛り上がりのひとときでした。</p>
+        </div>
+      </div>
+
+      <div class="cup-item">
+        <div class="cup-num">04</div>
+        <div>
+          <span class="present">PRESENTED BY ALGOMATIC DYNAMICS</span>
+          <h3>ロボットPK</h3>
+          <p>大会タイトルパートナー「Algomatic Dynamics」提供。最新の二足歩行ロボットと対戦できるロボットPKコーナーが登場し、子どもたちが未来のテクノロジーとふれあいました。</p>
+        </div>
+      </div>
+
+      <div class="cup-item">
+        <div class="cup-num">05</div>
+        <div>
+          <h3>会場限定「シモちゃんマン」シール</h3>
+          <p>オリジナルキャラクター「シモちゃんマン」のシールを会場限定で配布。福井の名物やヒーローに扮した<strong>全12種</strong>が登場し、子どもたちに大好評で大人気となりました。（写真は一部）</p>
+          <span class="pop">会場限定・全12種・大人気！</span>
+
+          <div class="sticker-grid">
+            <figure><img src="../images/sticker-2.png" alt="スーパーゴッドしもちゃん"><figcaption>スーパーゴッドしもちゃん</figcaption></figure>
+            <figure><img src="../images/sticker-1.png" alt="ハットトリックしもちゃん"><figcaption>ハットトリックしもちゃん</figcaption></figure>
+            <figure><img src="../images/sticker-6.png" alt="羽二重餅しもちゃん"><figcaption>羽二重餅しもちゃん</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 当日の様子 -->
+    <section class="cup-gallery">
+      <span class="eyebrow">Gallery</span>
+      <h2>当日の様子</h2>
+      <div class="gallery-grid">
+        <a href="../images/day-1.jpg" target="_blank" rel="noopener"><img src="../images/day-1.jpg" alt="WAKABA杯 当日の様子 1" /></a>
+        <a href="../images/day-2.jpg" target="_blank" rel="noopener"><img src="../images/day-2.jpg" alt="WAKABA杯 当日の様子 2" /></a>
+        <a href="../images/day-3.jpg" target="_blank" rel="noopener"><img src="../images/day-3.jpg" alt="WAKABA杯 当日の様子 3" /></a>
+        <a href="../images/day-4.jpg" target="_blank" rel="noopener"><img src="../images/day-4.jpg" alt="WAKABA杯 当日の様子 4" /></a>
+        <a href="../images/day-5.jpg" target="_blank" rel="noopener"><img src="../images/day-5.jpg" alt="WAKABA杯 当日の様子 5" /></a>
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <div class="cup-foot">
+      <a href="../index.html#archive">← アーカイブへ戻る</a>
+      <small>© 2026 SHIMOGUCHI WAKABA / 株式会社WAKABA</small>
+    </div>
+
+  </div>
+</body>
+</html>
