@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <title>STAFF ｜ WAKABA杯 運営ページ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20260617">
+  <link rel="stylesheet" href="css/staff.css">
+</head>
+
+<body class="staff-body">
+
+  <header class="staff-header">
+    <div class="staff-container">
+      <div class="staff-brand">
+        <a href="index.html" class="staff-brand-logo">
+          <span class="nav-logo-en">WAKABA</span>
+          <span class="nav-logo-jp">杯</span>
+        </a>
+        <span class="staff-brand-tag">STAFF</span>
+      </div>
+      <div class="staff-header-meta">
+        <span class="staff-countdown" id="staff-countdown">— days to go</span>
+        <span class="staff-saved" id="staff-saved" aria-live="polite"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="staff-warning">
+    <div class="staff-container">
+      <strong>⚠ このページは非公開です。</strong>
+      URLを外部に共有しないでください。検索エンジンには登録されません。
+    </div>
+  </div>
+
+  <main class="staff-main">
+    <div class="staff-container">
+
+      <h1 class="staff-title">運営メモ</h1>
+      <p class="staff-lead">
+        2026年6月20日(土) WAKABA杯 までの準備状況・当日進行・連絡先・自由メモ。<br>
+        チェック / メモは <strong>このブラウザに保存</strong> されます（同じ端末なら次回も復元）。
+      </p>
+
+      <!-- ===== 進捗チェックリスト ===== -->
+      <section class="staff-section">
+        <h2 class="staff-h2">
+          <span class="staff-h2-num">01</span>
+          進捗チェックリスト
+          <button type="button" class="staff-reset-btn" data-reset-checks>リセット</button>
+        </h2>
+
+        <div class="staff-checks">
+
+          <div class="staff-check-group">
+            <h3 class="staff-h3">大会運営</h3>
+            <ul class="check-list">
+              <li><label><input type="checkbox" data-check="venue-confirm"><span>会場（テクノポート福井スタジアム）の最終確認</span></label></li>
+              <li><label><input type="checkbox" data-check="permit"><span>会場使用申請・許可書の控え</span></label></li>
+              <li><label><input type="checkbox" data-check="insurance"><span>スポーツ保険の加入確認</span></label></li>
+              <li><label><input type="checkbox" data-check="teams-contact"><span>参加全12チームの代表者連絡先リスト化</span></label></li>
+              <li><label><input type="checkbox" data-check="teams-info"><span>各チームへ要項・タイムテーブル送付</span></label></li>
+              <li><label><input type="checkbox" data-check="entry-fee"><span>参加費（1万円×12チーム）の徴収状況管理</span></label></li>
+              <li><label><input type="checkbox" data-check="referee"><span>各チーム帯同審判の確定</span></label></li>
+              <li><label><input type="checkbox" data-check="schedule-final"><span>対戦カード・タイムテーブルの最終確定</span></label></li>
+            </ul>
+          </div>
+
+          <div class="staff-check-group">
+            <h3 class="staff-h3">エキシビジョン</h3>
+            <ul class="check-list">
+              <li><label><input type="checkbox" data-check="ex-team-wakaba"><span>Team-WAKABA メンバー確定（下口選手 + 福井ゆかり選手）</span></label></li>
+              <li><label><input type="checkbox" data-check="ex-mvp-rule"><span>各チームMVP選出ルールの周知（1〜2名）</span></label></li>
+              <li><label><input type="checkbox" data-check="ex-uniform"><span>Team-WAKABA ユニフォーム / ビブス手配</span></label></li>
+              <li><label><input type="checkbox" data-check="ex-warmup"><span>エキシビジョン前のウォームアップ枠確保</span></label></li>
+            </ul>
+          </div>
+
+          <div class="staff-check-group">
+            <h3 class="staff-h3">ロボットPK対決 準備（ALGOMATIC DYNAMICS）</h3>
+            <ul class="check-list">
+              <li><label><input type="checkbox" data-check="nx-concept"><span>ALGOMATIC DYNAMICS と企画内容・段取りの確定</span></label></li>
+              <li><label><input type="checkbox" data-check="nx-content"><span>ロボットPK進行プログラム・ルールの最終確認</span></label></li>
+              <li><label><input type="checkbox" data-check="nx-equipment"><span>ロボット／ゴール／必要備品の手配・搬入確認</span></label></li>
+              <li><label><input type="checkbox" data-check="nx-staff"><span>当日スタッフ・役割分担（ロボットPKコーナー）</span></label></li>
+              <li><label><input type="checkbox" data-check="nx-announce"><span>公開告知・SNS発信（HP公開済み）</span></label></li>
+            </ul>
+          </div>
+
+          <div class="staff-check-group">
+            <h3 class="staff-h3">協賛・出店</h3>
+            <ul class="check-list">
+              <li><label><input type="checkbox" data-check="sp-list"><span>協賛・出店候補のリスト化</span></label></li>
+              <li><label><input type="checkbox" data-check="sp-pitch"><span>協賛企業へのご提案資料作成</span></label></li>
+              <li><label><input type="checkbox" data-check="sp-booth-layout"><span>ブース配置図の作成</span></label></li>
+              <li><label><input type="checkbox" data-check="sp-electricity"><span>電源・水まわり等の出店者ニーズ調整</span></label></li>
+              <li><label><input type="checkbox" data-check="sp-banner"><span>協賛ロゴ掲出物（バナー / プログラム）</span></label></li>
+            </ul>
+          </div>
+
+          <div class="staff-check-group">
+            <h3 class="staff-h3">当日運営</h3>
+            <ul class="check-list">
+              <li><label><input type="checkbox" data-check="day-staff"><span>スタッフ手配・役割分担表の作成</span></label></li>
+              <li><label><input type="checkbox" data-check="day-mc"><span>司会・アナウンス担当の確定</span></label></li>
+              <li><label><input type="checkbox" data-check="day-mic"><span>マイク・スピーカー・延長コードの手配</span></label></li>
+              <li><label><input type="checkbox" data-check="day-medical"><span>救護セット・氷・AEDの位置確認</span></label></li>
+              <li><label><input type="checkbox" data-check="day-photo"><span>カメラマン / SNS撮影担当の手配</span></label></li>
+              <li><label><input type="checkbox" data-check="day-mvp"><span>MVP表彰品（賞状・トロフィー等）の準備</span></label></li>
+              <li><label><input type="checkbox" data-check="day-water"><span>選手・スタッフ用の水分（500ml × 必要量）</span></label></li>
+              <li><label><input type="checkbox" data-check="day-trash"><span>ゴミ袋・分別表示</span></label></li>
+              <li><label><input type="checkbox" data-check="day-signage"><span>受付・ベンチエリア等の掲示物作成</span></label></li>
+            </ul>
+          </div>
+
+          <div class="staff-check-group">
+            <h3 class="staff-h3">後日対応</h3>
+            <ul class="check-list">
+              <li><label><input type="checkbox" data-check="post-thanks"><span>各チーム・協賛先へのお礼連絡</span></label></li>
+              <li><label><input type="checkbox" data-check="post-photos"><span>大会写真の整理・配布</span></label></li>
+              <li><label><input type="checkbox" data-check="post-report"><span>大会レポート / 収支報告</span></label></li>
+              <li><label><input type="checkbox" data-check="post-sns"><span>SNS振り返り投稿</span></label></li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== 当日タイムテーブル ===== -->
+      <section class="staff-section">
+        <h2 class="staff-h2">
+          <span class="staff-h2-num">02</span>
+          当日タイムテーブル（運営視点）
+        </h2>
+        <p class="staff-section-note">
+          表側のタイムテーブルは <a href="schedule.html" target="_blank" rel="noopener">schedule.html</a>。
+          こちらはスタッフ動線含む詳細版。
+        </p>
+        <table class="staff-table">
+          <thead>
+            <tr><th>時刻</th><th>項目</th><th>担当・備考</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>06:00</td><td>スタッフ集合・ミーティング</td><td>役割確認 / 緊急連絡確認</td></tr>
+            <tr><td>06:30</td><td>会場設営開始</td><td>受付 / ベンチ / ピッチ整備 / 物販</td></tr>
+            <tr><td>08:30 — 09:00</td><td>開場・各チーム受付</td><td>受付2名 / 名簿チェック / ビブス配布</td></tr>
+            <tr><td>09:00 — 09:15</td><td>開会式</td><td>司会進行 / 下口選手挨拶</td></tr>
+            <tr><td>09:15 — 14:25</td><td>予選 試合 全6スロット (U-12 / U-10 交互、15分ハーフ×6スロット)</td><td>審判帯同確認 / タイム管理 / MVP候補メモ取り / 夏場の気候対応で休息時間長め</td></tr>
+            <tr><td>14:45 — 15:00</td><td>MVP選出・整列</td><td>各チームより MVP 提出（各1〜2名）／ Team-WAKABA招集</td></tr>
+            <tr><td>15:00 — 15:45</td><td>エキシビジョンマッチ</td><td>前半 U-10 MVP / 後半 U-12 MVP × Team-WAKABA（15分ハーフ）</td></tr>
+            <tr><td>15:50 — 16:00</td><td>閉会式・MVP表彰</td><td>賞状授与 / 集合写真</td></tr>
+            <tr><td>16:00 — 17:00</td><td>ロボットPK対決（ALGOMATIC DYNAMICS）</td><td>ロボットが蹴り／来場者がGK ／ ALGOMATIC DYNAMICS 主催・進行</td></tr>
+            <tr><td>17:00 —</td><td>撤収</td><td>会場原状復帰 / ゴミ持ち帰り</td></tr>
+            <tr><td colspan="3" style="text-align:center; color:#888; font-size:12px;">※ 昼休憩は設けません。スタッフは交代でランチ。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ===== 連絡先 ===== -->
+      <section class="staff-section">
+        <h2 class="staff-h2">
+          <span class="staff-h2-num">03</span>
+          連絡先
+        </h2>
+        <p class="staff-section-note">
+          ※ 編集はリポジトリ内 <code>staff.html</code> を直接更新してください（ローカルメモではありません）。
+        </p>
+        <table class="staff-table">
+          <tbody>
+            <tr><th>運営事務局</th><td><a href="mailto:wakaba.cup0620@gmail.com">wakaba.cup0620@gmail.com</a></td></tr>
+            <tr><th>主催（下口稚葉）</th><td>—</td></tr>
+            <tr><th>会場：テクノポート福井スタジアム</th><td>電話番号：—</td></tr>
+            <tr><th>救急（消防）</th><td>119</td></tr>
+            <tr><th>警察</th><td>110</td></tr>
+            <tr><th>最寄り病院</th><td>—</td></tr>
+            <tr><th>カメラマン</th><td>—</td></tr>
+            <tr><th>司会</th><td>—</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ===== 自由メモ ===== -->
+      <section class="staff-section">
+        <h2 class="staff-h2">
+          <span class="staff-h2-num">04</span>
+          自由メモ
+          <button type="button" class="staff-reset-btn" data-reset-memo>クリア</button>
+        </h2>
+        <p class="staff-section-note">
+          書いた内容はこのブラウザに自動保存されます。端末・ブラウザを変えると引き継がれない点だけ注意。
+        </p>
+        <textarea id="staff-memo" data-memo="ops-memo" class="staff-memo" rows="14"
+          placeholder="ここに自由にメモを書けます。&#10;&#10;・思いついたタスク&#10;・確認したいこと&#10;・関係者からのインプット&#10;・..."></textarea>
+      </section>
+
+      <p class="staff-foot">
+        <a href="index.html" class="staff-back">← TOPページへ戻る</a>
+      </p>
+
+    </div>
+  </main>
+
+  <script src="js/staff.js"></script>
+</body>
+
+</html>
