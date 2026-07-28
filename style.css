@@ -246,7 +246,7 @@ a { color: inherit; text-decoration: none; }
 .home__photo {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: contain; object-position: center;
+  object-fit: contain; object-position: 86% 50%;   /* 被写体を右へ寄せ、左にコピー用スペースを作る */
   opacity: 0; animation: crossfade 14s infinite;
   /* 写真を明るく（黒背景は黒のまま、被写体だけ明るくなります） */
   filter: brightness(1.45) contrast(1.04) saturate(1.05);
@@ -257,24 +257,34 @@ a { color: inherit; text-decoration: none; }
 }
 .home::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,.2) 0%, transparent 26%, transparent 64%, rgba(0,0,0,.6) 100%);
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.75) 0%, rgba(0,0,0,.35) 42%, transparent 68%),
+    linear-gradient(180deg, rgba(0,0,0,.25) 0%, transparent 30%, transparent 68%, rgba(0,0,0,.6) 100%);
   pointer-events: none;
 }
-/* 左下に細い青→緑のライン */
-.home__name { position: absolute; left: clamp(28px, 6vw, 90px); bottom: clamp(48px, 8vh, 90px); z-index: 2; }
-.home__name::before {
-  content: ""; display: block; width: 56px; height: 4px; margin-bottom: 20px;
-  background: linear-gradient(90deg, var(--blue-br), var(--green-br));
+/* 大きなキャッチコピー（BE YOUR SPRING.） */
+.home__catch { position: absolute; left: clamp(28px, 6vw, 90px); top: 50%; transform: translateY(-50%); z-index: 2; max-width: 64%; }
+.home__eyebrow {
+  font-family: "Oswald", sans-serif; font-weight: 600; letter-spacing: .2em;
+  font-size: clamp(11px, 1.3vw, 14px); color: var(--green); margin: 0 0 18px;
 }
-.home__name .en {
+.home__copy {
   font-family: "Anton", "Oswald", sans-serif; font-weight: 400;
-  font-size: clamp(36px, 6.6vw, 82px); line-height: 1.22; letter-spacing: .005em; margin: 0;
-  color: rgba(255,255,255,.7);            /* 半透明（白） */
-  transform: skewX(-9deg); transform-origin: left bottom; /* 斜体（イタリック）に傾ける */
-  text-shadow: 0 4px 24px rgba(0,0,0,.4);
+  font-size: clamp(52px, 12.5vw, 168px); line-height: .84; letter-spacing: .01em;
+  color: rgba(255,255,255,.94); margin: 0; text-shadow: 0 8px 34px rgba(0,0,0,.55);
 }
-.home__name .en .g { color: rgba(74,198,83,.78); }   /* W のみ緑（半透明） */
-.home__name .jp { margin: 16px 0 0; font-size: clamp(15px, 2.4vw, 20px); letter-spacing: .3em; color: rgba(255,255,255,.85); }
+.home__copy .g { color: var(--green); }
+.home__sub {
+  margin: 28px 0 0; max-width: 30em; font-weight: 700; line-height: 1.9;
+  font-size: clamp(14px, 1.7vw, 18px); color: rgba(255,255,255,.86);
+}
+.home__sub span {
+  display: block; margin-top: 8px; font-family: "Oswald", sans-serif; font-weight: 500;
+  font-size: .82em; letter-spacing: .06em; color: rgba(255,255,255,.5);
+}
+/* 選手名（左下・小さめ） */
+.home__name { position: absolute; left: clamp(28px, 6vw, 90px); bottom: clamp(40px, 7vh, 80px); z-index: 2; }
+.home__name .jp { margin: 0; font-size: clamp(12px, 1.5vw, 15px); letter-spacing: .18em; color: rgba(255,255,255,.7); }
 .home__role { position: absolute; right: clamp(28px, 6vw, 90px); bottom: clamp(48px, 8vh, 90px); text-align: right; z-index: 2; }
 .home__role span { display: block; font-family: "Oswald", sans-serif; letter-spacing: .2em; color: rgba(255,255,255,.6); font-size: 12px; }
 .home__role b { font-family: "Oswald", sans-serif; font-size: 17px; letter-spacing: .12em; color: #fff; }
@@ -505,6 +515,12 @@ a { color: inherit; text-decoration: none; }
   .main, .footer { margin-left: 0; }
   .main { padding-top: 54px; }
   .home { height: calc(100vh - 54px); }
+  .home__photo { object-position: 68% 14%; }
+  .home__catch { max-width: none; left: 22px; right: 22px; top: 42%; }
+  .home__copy { font-size: clamp(48px, 17vw, 96px); }
+  .home__sub { font-size: 14px; }
+  .home__name { bottom: 30px; }
+  .home__role { bottom: 30px; }
   .profile-info { grid-template-columns:1fr; gap:32px; }
   .profile-hero { justify-content:center; }
   .profile-hero__name { left:14px; bottom:14px; top:auto; transform:none; max-width:70%; }
