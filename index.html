@@ -13,7 +13,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -22,70 +22,68 @@
   <!-- =====================================================
        左サイドメニュー
        ===================================================== -->
-  <aside class="sidebar">
-    <a href="#home" class="sidebar__brand">
-      WAKABA<span class="dot">.</span>
-      <small>株式会社WAKABA<span class="en">WAKABA Inc.</span></small>
-    </a>
-
-    <nav class="sidebar__nav" id="navLinks">
-      <a href="#home">HOME</a>
-      <a href="#news">NEWS</a>
-      <a href="#profile">PROFILE</a>
-      <a href="#vision">VISION</a>
-      <a href="#talent">TALENT</a>
-      <a href="#events">EVENTS</a>
-      <a href="#archive">ARCHIVE</a>
-      <a href="#contact">CONTACT</a>
-    </nav>
-
-    <div class="sidebar__foot">
-      <div class="sns">
-        <!-- ▼ 公式LINEのURLが決まったら href を差し替えてください -->
-        <a href="#" class="sns-btn sns-btn--line" aria-label="公式LINE">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.5 2 2 5.6 2 10.1c0 4 3.6 7.4 8.4 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6h0c1.5-1.6 2.2-3.3 2.2-5C22.6 5.6 18.1 2 12 2z"/></svg>
-          <span>公式LINE</span>
-        </a>
-        <a href="https://www.instagram.com/wakawaka0502/" class="sns-btn sns-btn--ig" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>
-          <span>Instagram</span>
-        </a>
-      </div>
-      <p>下口稚葉 オフィシャルサイト</p>
-    </div>
-
-    <!-- スマホ用ハンバーガー -->
-    <div class="topbar">
+  <header class="header" id="header">
+    <div class="nav">
+      <a href="#home" class="brand">WAKABA<span class="dot">.</span></a>
       <button class="nav-toggle" id="navToggle" aria-label="メニュー">
         <span></span><span></span><span></span>
       </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#news">NEWS</a></li>
+        <li><a href="#profile">PROFILE</a></li>
+        <li><a href="#vision">VISION</a></li>
+        <li><a href="#talent">TALENT</a></li>
+        <li><a href="#events">EVENTS</a></li>
+        <li><a href="#archive">ARCHIVE</a></li>
+        <li class="nav-sns">
+          <a href="https://www.instagram.com/wakawaka0502/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <!-- ▼ 公式LINEのURLが決まったら href を差し替えてください -->
+          <a href="#" aria-label="公式LINE">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.5 2 2 5.6 2 10.1c0 4 3.6 7.4 8.4 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6h0c1.5-1.6 2.2-3.3 2.2-5C22.6 5.6 18.1 2 12 2z"/></svg>
+          </a>
+        </li>
+        <li><a href="#contact" class="nav-cta">CONTACT<span class="arw">→</span></a></li>
+      </ul>
     </div>
-  </aside>
+  </header>
 
   <!-- =====================================================
        メイン
        ===================================================== -->
   <main class="main">
 
-    <!-- ===== HOME（写真＋名前のみ）===== -->
+    <!-- ===== HOME（中央に大きくキャッチコピー）===== -->
     <section class="home" id="home">
-      <!-- 2枚の写真がゆっくり切り替わります（1枚目=シック / 2枚目=笑顔） -->
-      <img class="home__photo is-1" src="images/portrait-chic.jpg" alt="下口稚葉" />
-      <img class="home__photo is-2" src="images/portrait-smile.jpg" alt="下口稚葉" />
-
-      <div class="home__catch">
-        <p class="home__eyebrow">SHIMOGUCHI WAKABA ｜ 株式会社WAKABA</p>
-        <h1 class="home__copy">BE<br>YOUR<br><span class="g">SPRING.</span></h1>
-        <p class="home__sub">もう一度、芽吹く。その瞬間から。<span>We want to be someone's spring.</span></p>
+      <!-- 筆で書くように3パターンの曲線が順番に描かれ、その中に写真が現れる（黒背景はスクリーン合成で消える） -->
+      <svg class="home__swoosh" viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <mask id="mA" maskUnits="userSpaceOnUse"><path class="brush pA" pathLength="100" d="M -180 560 C 180 790 390 720 520 560 C 610 450 650 350 720 350 C 800 350 880 480 1010 610 C 1210 810 1440 720 1660 430" fill="none" stroke="#fff" stroke-width="250" stroke-linecap="round" stroke-linejoin="round" /></mask>
+          <mask id="mB" maskUnits="userSpaceOnUse"><path class="brush pB" pathLength="100" d="M -200 830 C 230 600 470 375 720 350 C 1000 322 1270 300 1660 120" fill="none" stroke="#fff" stroke-width="250" stroke-linecap="round" stroke-linejoin="round" /></mask>
+          <mask id="mC" maskUnits="userSpaceOnUse"><path class="brush pC" pathLength="100" d="M -180 190 C 270 360 510 350 720 350 C 1000 350 1230 560 1660 830" fill="none" stroke="#fff" stroke-width="250" stroke-linecap="round" stroke-linejoin="round" /></mask>
+        </defs>
+        <g mask="url(#mA)" style="isolation:isolate">
+          <rect x="0" y="0" width="1440" height="1000" fill="#a9e839" />
+          <image href="images/shimoguchi-01.jpg" x="0" y="0" width="1440" height="1000" preserveAspectRatio="xMidYMid slice" style="mix-blend-mode:screen; filter: contrast(1.4) brightness(1.18) saturate(1.08)" />
+        </g>
+        <g mask="url(#mB)" style="isolation:isolate">
+          <rect x="0" y="0" width="1440" height="1000" fill="#a9e839" />
+          <image href="images/shimoguchi-01.jpg" x="0" y="0" width="1440" height="1000" preserveAspectRatio="xMidYMid slice" style="mix-blend-mode:screen; filter: contrast(1.4) brightness(1.18) saturate(1.08)" />
+        </g>
+        <g mask="url(#mC)" style="isolation:isolate">
+          <rect x="0" y="0" width="1440" height="1000" fill="#a9e839" />
+          <image href="images/shimoguchi-01.jpg" x="0" y="0" width="1440" height="1000" preserveAspectRatio="xMidYMid slice" style="mix-blend-mode:screen; filter: contrast(1.4) brightness(1.18) saturate(1.08)" />
+        </g>
+      </svg>
+      <div class="home__center">
+        <h1 class="home__jp">
+          <span>競技の</span>
+          <hr class="home__rule" />
+          <span>その先も輝ける。</span>
+        </h1>
+        <p class="home__en">BEYOND THE GAME.</p>
       </div>
-      <div class="home__name">
-        <p class="jp">下口 稚葉 ／ SHIMOGUCHI WAKABA</p>
-      </div>
-      <div class="home__role">
-        <b>DEFENDER</b>
-        <span>SHONAN BELLMARE</span>
-      </div>
-      <div class="scroll-hint">SCROLL</div>
     </section>
 
     <!-- ===== NEWS ===== -->
@@ -317,14 +315,31 @@
 
   <!-- ===== フッター ===== -->
   <footer class="footer">
-    <small>© 2026 SHIMOGUCHI WAKABA / 株式会社WAKABA</small>
-    <a href="#home" class="up">↑ TOPへ戻る</a>
+    <div class="container">
+      <a href="#home" class="brand">WAKABA<span class="dot">.</span></a>
+      <nav class="footer__links">
+        <a href="#news">NEWS</a>
+        <a href="#profile">PROFILE</a>
+        <a href="#vision">VISION</a>
+        <a href="#talent">TALENT</a>
+        <a href="#events">EVENTS</a>
+        <a href="#archive">ARCHIVE</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </div>
+    <p class="footer__copy">© 2026 SHIMOGUCHI WAKABA / 株式会社WAKABA</p>
   </footer>
 
   <!-- =====================================================
        動き（メニュー開閉・現在地ハイライト・ふわっと表示）
        ===================================================== -->
   <script>
+    // スクロールでヘッダーを白くする
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 30);
+    }, { passive: true });
+
     // スマホメニュー開閉
     const toggle = document.getElementById('navToggle');
     const links = document.getElementById('navLinks');
