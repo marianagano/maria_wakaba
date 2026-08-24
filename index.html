@@ -375,6 +375,15 @@
       }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
       io4.observe(projSec);
     }
+    // ARCHIVE（最下部）表示中は賛同企業バナーを隠す
+    const pjFab = document.querySelector('.pj-fab');
+    const archiveSec = document.getElementById('archive');
+    if (pjFab && archiveSec) {
+      const fabIO = new IntersectionObserver((es) => {
+        es.forEach(e => pjFab.classList.toggle('is-hidden', e.isIntersecting));
+      }, { threshold: 0 });
+      fabIO.observe(archiveSec);
+    }
   </script>
   <!-- WAKABA PROJECT 賛同企業 固定リンク -->
   <a class="pj-fab" href="#project" aria-label="WAKABA PROJECT 賛同企業はこちら">
