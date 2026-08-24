@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>所属タレント｜下口稚葉 オフィシャルサイト</title>
+  <meta name="description" content="株式会社WAKABAの所属タレント。選手・著名人のセカンドキャリアと、これからの挑戦に伴走します。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header is-scrolled" id="header">
+    <div class="nav">
+      <a href="index.html#home" class="brand">WAKABA<span class="dot">.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="profile.html">PROFILE</a></li>
+        <li><a href="index.html#vision">VISION</a></li>
+        <li><a href="index.html#project">PROJECT</a></li>
+        <li><a href="talent.html" class="is-active">TALENT</a></li>
+        <li><a href="index.html#archive">ARCHIVE</a></li>
+        <li class="nav-sns">
+          <a href="https://www.instagram.com/wakawaka0502/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://lin.ee/UhDBp0c" target="_blank" rel="noopener" aria-label="公式LINE">
+            <svg viewBox="0 0 36 36" width="22" height="22" aria-hidden="true"><rect x=".5" y=".5" width="35" height="35" rx="8" fill="#06C755" stroke="rgba(255,255,255,.5)" stroke-width="1"/><text x="18" y="22.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="11" letter-spacing=".3" fill="#fff">LINE</text></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main" style="padding-top: clamp(90px,10vw,120px)">
+    <section class="section section--dark" id="talent">
+      <h2 class="section-bigtitle">TALENT<span class="bigtitle-sub">所属タレント</span></h2>
+      <p class="talent-lead">選手・著名人のセカンドキャリアと、これからの挑戦へ。株式会社WAKABAが、その歩みに伴走します。</p>
+
+      <div class="talent-grid">
+        <!-- 下口稚葉 -->
+        <a class="talent-card reveal" href="profile.html">
+          <div class="talent-card__photo">
+            <img src="images/portrait-chic.jpg" alt="下口稚葉" />
+          </div>
+          <div class="talent-card__body">
+            <p class="talent-card__name">下口 稚葉<span class="en">SHIMOGUCHI WAKABA</span></p>
+            <p class="talent-card__role">サッカー選手 ／ 湘南ベルマーレ DF</p>
+          </div>
+        </a>
+
+        <!-- Coming Soon 枠 -->
+        <div class="talent-card talent-card--soon reveal">
+          <span class="soon-label">COMING SOON</span>
+          <span class="soon-note">次なるタレントが加わります</span>
+        </div>
+        <div class="talent-card talent-card--soon reveal">
+          <span class="soon-label">COMING SOON</span>
+          <span class="soon-note">次なるタレントが加わります</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="index.html#home" class="brand">WAKABA<span class="dot">.</span></a>
+      <nav class="footer__links">
+        <a class="footer__sns" href="https://lin.ee/UhDBp0c" target="_blank" rel="noopener" aria-label="下口稚葉 公式LINE">
+          <svg viewBox="0 0 36 36" width="22" height="22" aria-hidden="true"><rect x=".5" y=".5" width="35" height="35" rx="8" fill="#06C755" stroke="rgba(255,255,255,.5)" stroke-width="1"/><text x="18" y="22.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="11" letter-spacing=".3" fill="#fff">LINE</text></svg>
+        </a>
+        <a class="footer__sns" href="https://www.instagram.com/wakawaka0502/" target="_blank" rel="noopener" aria-label="下口稚葉 Instagram">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="profile.html">PROFILE</a>
+        <a href="index.html#vision">VISION</a>
+        <a href="index.html#project">PROJECT</a>
+        <a href="talent.html">TALENT</a>
+        <a href="index.html#archive">ARCHIVE</a>
+      </nav>
+    </div>
+    <p class="footer__copy">© 2026 SHIMOGUCHI WAKABA / 株式会社WAKABA</p>
+  </footer>
+
+  <script>
+    document.getElementById('header').classList.add('is-scrolled');
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('is-open');
+      links.classList.toggle('is-open');
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      toggle.classList.remove('is-open');
+      links.classList.remove('is-open');
+    }));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+  <!-- WAKABA PROJECT 賛同企業 固定リンク -->
+  <a class="pj-fab" href="index.html#project" aria-label="WAKABA PROJECT 賛同企業はこちら">
+    <span class="pj-fab__main">
+      <span class="pj-fab__big">WAKABA PROJECT!</span>
+      <span class="pj-fab__sub">賛同企業はこちら<span class="pj-fab__arw" aria-hidden="true">↗</span></span>
+    </span>
+    <img class="pj-fab__img" src="images/WAKABAプロジェクト②.jpg" alt="" aria-hidden="true" />
+  </a>
+</body>
+</html>

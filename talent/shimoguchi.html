@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>下口稚葉 インタビュー｜下口稚葉 オフィシャルサイト</title>
+  <meta name="description" content="サッカー選手・下口稚葉（湘南ベルマーレ DF）のインタビュー。競技のその先も豊かに生きられることを証明したい――その想いを聞きました。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body { background: #ffffff; }
+    .art-bar {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px clamp(24px, 6vw, 80px);
+      background: rgba(255,255,255,.92); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .art-back { font-size: 13px; color: var(--muted); letter-spacing: .04em; }
+    .art-back:hover { color: var(--green-d); }
+    .art-brand { font-family: "Oswald", sans-serif; font-weight: 700; font-size: 22px; letter-spacing: .16em; color: var(--ink); }
+    .art-brand span { color: var(--green); }
+
+    .iv-wrap { max-width: 860px; margin: 0 auto; padding: 56px clamp(24px,6vw,40px) 90px; }
+
+    /* ヒーロー（参考：growin interview） */
+    .iv-top { position: relative; overflow: hidden; min-height: clamp(520px,80vh,880px); background: linear-gradient(180deg,#eef2f5,#e6ecf1); display: flex; }
+    .iv-top__photo { position: absolute; top: 0; right: 0; height: 100%; width: 58%; object-fit: cover; object-position: 62% 28%; filter: brightness(1.05); z-index: 0; }
+    .iv-top::after { content:""; position:absolute; inset:0; z-index:1; background: linear-gradient(90deg, #eef2f5 0%, rgba(238,242,245,.72) 38%, rgba(238,242,245,0) 64%); }
+    .iv-top__inner { position: relative; z-index: 2; display: flex; flex-direction: column; max-width: var(--maxw); width: 100%; margin: 0 auto; padding: clamp(36px,6vw,80px) clamp(24px,6vw,64px); }
+    .iv-top__label { font-family:"Oswald",sans-serif; font-weight:700; letter-spacing:.16em; font-size:14px; color: var(--green-d); }
+    .iv-top__label::before { content:"● "; color: var(--green); }
+    .iv-top__catch { margin: clamp(16px,2.5vw,26px) 0 0; font-weight: 900; line-height: 1.72; font-size: clamp(26px,4.4vw,50px); color: var(--ink); }
+    .iv-top__catch .hl { background: #fff; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: .12em .34em; box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+    .iv-top__name { margin-top: auto; padding-top: clamp(40px,7vw,80px); }
+    .iv-top__role { font-size: clamp(13px,1.5vw,16px); font-weight:700; color: var(--ink); letter-spacing:.04em; }
+    .iv-top__jp { font-size: clamp(30px,5vw,54px); font-weight:900; color: var(--ink); margin:10px 0 0; letter-spacing:.06em; }
+    .iv-top__en { font-family:"Oswald",sans-serif; font-size: clamp(12px,1.6vw,16px); letter-spacing:.22em; color: var(--muted); margin:8px 0 0; }
+    @media (max-width: 768px) {
+      .iv-top__photo { width: 100%; object-position: 60% 18%; }
+      .iv-top::after { background: linear-gradient(180deg, rgba(238,242,245,.15) 0%, rgba(238,242,245,.78) 55%, #eef2f5 100%); }
+      .iv-top__inner { justify-content: flex-end; }
+    }
+
+    .art-body p { color: #3a3f45; line-height: 2.05; margin: 0 0 22px; }
+    .art-body .lead { font-size: 16px; color: var(--ink); }
+    .iv-h { font-size: clamp(18px,2.4vw,25px); font-weight: 900; color: var(--ink); line-height: 1.6; margin: 36px 0 14px; white-space: nowrap; }
+    .iv-emph { font-family:"Shippori Mincho", serif; font-weight: 600; color: var(--ink); font-size: clamp(17px,2.2vw,22px); line-height: 1.95; margin-top: 30px; }
+    .iv-endphoto { display: block; width: 100%; height: auto; border-radius: 16px; margin: clamp(30px,5vw,56px) 0 0; }
+
+    .art-detail { list-style: none; margin: 30px 0 0; padding: 26px 28px; background: var(--green-l); border: 1px solid var(--line); border-radius: 14px; }
+    .art-detail li { display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,.08); }
+    .art-detail li:last-child { border-bottom: 0; }
+    .art-detail .k { color: var(--green-d); font-weight: 700; font-size: 14px; }
+    .art-detail .v { color: var(--ink); font-size: 15px; }
+
+    .art-foot { padding: 34px 0 0; border-top: 1px solid var(--line); text-align: center; margin-top: 44px; }
+    .art-foot a { color: var(--green-d); font-size: 14px; letter-spacing: .04em; }
+    .art-foot small { display: block; margin-top: 16px; color: var(--muted); font-size: 12px; }
+
+    @media (max-width: 560px) {
+      .iv-h { white-space: normal; }
+      .art-detail li { grid-template-columns: 1fr; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="art-bar">
+    <a href="../talent.html" class="art-back">← 所属タレントへ戻る</a>
+    <span class="art-brand">WAKABA<span>.</span></span>
+  </header>
+
+  <section class="iv-top">
+    <img class="iv-top__photo" src="../images/shimoguchi-03.jpg" alt="下口稚葉" />
+    <div class="iv-top__inner">
+      <p class="iv-top__label">Player Interview</p>
+      <h1 class="iv-top__catch"><span class="hl">自分に何が残るだろう。<br>競技のその先も豊かに生きられることを証明したい。</span></h1>
+      <div class="iv-top__name">
+        <p class="iv-top__role">サッカー選手 ／ 湘南ベルマーレ DF</p>
+        <p class="iv-top__jp">下口 稚葉</p>
+        <p class="iv-top__en">SHIMOGUCHI WAKABA</p>
+      </div>
+    </div>
+  </section>
+
+  <article class="iv-wrap">
+    <div class="art-body">
+      <h3 class="iv-h">自分に何が残るだろう。</h3>
+      <p>JFAアカデミー福島で学び、ファジアーノ岡山でプロの一歩を踏み出してから、AC長野パルセイロやFC今治、大宮での日々を経て、湘南ベルマーレへ。さまざまなチームでプレーしてきた中では、思うようにいかず悔しい思いをした時期もあれば、仲間とともに勝利をつかんだ嬉しい瞬間もありました。その一つひとつが、今の自分をつくっています。</p>
+      <p>だからこそ、日々サッカーと向き合う中で、漠然とした将来への不安や、これまでお世話になってきた人々・環境に対して、自分に何かできることはないかと悶々としていました。</p>
+
+      <h3 class="iv-h">福井県福井市に生まれ、中学で親元を離れJFAアカデミー福島へ。</h3>
+      <p>両親は昔から、「サッカー選手になりたい」という夢を全力で応援・サポートしてくれました。<br>
+      何か恩返しをしたいと考えていたとき、思いついたのがWAKABA杯です。<br>
+      ふるさと福井出身のJリーガーは、決して多くありません。それでも地元に帰ると、サッカーが好きな子どもたち、そして大人がたくさんいる。ここだなと思いましたね。</p>
+
+      <h3 class="iv-h">テクノポート福井スタジアムにて、第一回WAKABA杯を開催。</h3>
+      <p>WAKABA杯では小学生のサッカー大会やエキシビジョンマッチ、ビンゴ大会などを行いました。<br>
+      第一回で強く感じたのは、未来を担う子どもたちに、安心して夢を追い続けてほしいということ。<br>
+      目をキラキラさせながらプレーする姿を見て、「サッカー選手になりたい」と願っていた子どもの頃の自分を思い出しました。</p>
+      <p>驚いたのは、小学生チームのコーチや保護者の皆さんがとても協力的だったこと。エキシビジョンマッチでは、大人のほうが楽しんでいるのではと思うほどでした（笑）。<br>
+      昔お世話になった監督や友人、地元のテレビ局の方々も駆けつけてくださり、たくさんの方々の協力のおかげで大会を開催でき、本当にうれしかったです。</p>
+
+      <h3 class="iv-h">競技のその先も、豊かに生きられることを証明したい。</h3>
+      <p>選択肢も比較対象もあふれる現代。いい面もたくさんあると思いますが、「プロで生きていけるのはほんの一握りだから」と夢にブレーキをかけてしまうのは、もったいない。</p>
+      <p class="iv-emph">自分自身、サッカーを通してたくさんの人と出会い、人生が豊かになりました。<br>
+      こんな生き方・キャリアもあるんだ！ということを、これから私自身が証明していきたいですね。</p>
+      <img class="iv-endphoto" src="../images/shimoguchi-04.jpg" alt="下口稚葉" />
+    </div>
+
+    <div class="art-foot">
+      <a href="../talent.html">← 所属タレント一覧へ戻る</a>
+      <small>© 2026 SHIMOGUCHI WAKABA / 株式会社WAKABA</small>
+    </div>
+  </article>
+
+  <!-- WAKABA PROJECT 賛同企業 固定リンク -->
+  <a class="pj-fab" href="../index.html#project" aria-label="WAKABA PROJECT 賛同企業はこちら">
+    <span class="pj-fab__main">
+      <span class="pj-fab__big">WAKABA PROJECT!</span>
+      <span class="pj-fab__sub">賛同企業はこちら<span class="pj-fab__arw" aria-hidden="true">↗</span></span>
+    </span>
+    <img class="pj-fab__img" src="../images/WAKABAプロジェクト②.jpg" alt="" aria-hidden="true" />
+  </a>
+</body>
+</html>

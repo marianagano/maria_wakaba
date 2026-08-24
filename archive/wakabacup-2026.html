@@ -13,6 +13,9 @@
   <!-- 本体サイトと同じスタイルを読み込み、このページ専用の追記をします -->
   <link rel="stylesheet" href="../style.css" />
   <style>
+    /* このページはダークデザイン（白文字）。共通CSSのbodyが白背景のため上書き */
+    body { background: #0b0d0e; color: #fff; }
+    :root { --lime-ink: #eaffd0; }
     .cup-bar {
       position: sticky; top: 0; z-index: 50;
       display: flex; align-items: center; justify-content: space-between;
@@ -106,7 +109,7 @@
 <body>
 
   <header class="cup-bar">
-    <a href="../index.html" class="cup-back">← オフィシャルサイトへ戻る</a>
+    <a href="../index.html#archive" class="cup-back">← 一覧へ戻る</a>
     <span class="cup-brand">WAKABA<span>.</span></span>
   </header>
 
@@ -115,14 +118,14 @@
     <!-- ヒーロー -->
     <section class="cup-hero">
       <div class="cup-hero__title">
-        <span class="eyebrow">Archive — 2026.06.20</span>
+        <span class="eyebrow">2026.06.20</span>
         <h1>第一回 <span class="g">WAKABA</span>杯</h1>
       </div>
       <p class="cup-hero__meta">
         <b>日時</b>　2026年6月20日（土）<br>
         <b>会場</b>　テクノポート福井スタジアム<br>
         <b>主催</b>　株式会社WAKABA<br>
-        <b>大会HP</b>　<a href="../cup/" class="cup-hp">WAKABA杯 公式サイトを見る →</a><br>
+        <b>大会HP</b>　<a href="https://wakaba-e3z.pages.dev/" class="cup-hp" target="_blank" rel="noopener">WAKABA杯 公式サイト</a><br>
         地元・福井を盛り上げた、記念すべき第1回大会。
       </p>
       <div class="cup-hero__poster">
@@ -200,7 +203,6 @@
 
     <!-- フッター -->
     <div class="cup-foot">
-      <a href="../index.html#archive">← アーカイブへ戻る</a>
       <small>© 2026 SHIMOGUCHI WAKABA / 株式会社WAKABA</small>
     </div>
 
