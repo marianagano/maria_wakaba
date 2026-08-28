@@ -507,6 +507,9 @@ body.pw-mode .nav-toggle span { background:#fff; }
   .pj-fab__sub { font-size: 12px; }
 }
 
+/* アンカー移動時に固定ヘッダーで隠れないように */
+#vision, #wecan, #events, #archive, #contact, #project { scroll-margin-top: 84px; }
+
 /* EVENTS 見出しを中央寄せ */
 #events > .eyebrow, #events > .section-title { text-align: center; }
 

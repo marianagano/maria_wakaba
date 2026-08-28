@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
   <style>
     /* ===== PROFILE（参考：DMJ 代表メッセージ）===== */
     html, body { overflow-x: hidden; }
@@ -85,11 +85,12 @@
       .pm-hero { grid-template-columns: 1fr; gap: 24px; margin: 12px 0 clamp(40px,8vw,70px); }
       .pm-photo { order:1; transform: none; }
       .pm-name { order:2; justify-self:center; }
-      .pm-name-row { flex-direction:row; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px; }
-      .pm-name-main { position:static; margin-right:0; align-items:center; }
+      .pm-name-row { flex-direction:column; align-items:center; gap:6px; }
+      .pm-name-main { position:static; margin-right:0; flex-direction:column; align-items:center; gap:2px; z-index:auto; }
       .pm-name-jp, .pm-name-team, .pm-name-co { writing-mode: horizontal-tb; }
-      .pm-name-en { position:static; top:auto; left:auto; margin:4px 0 0; text-align:center;
-        color:rgba(30,40,20,.22); font-size: clamp(24px,8vw,44px); }
+      .pm-name-jp { font-size: clamp(30px,8vw,46px); }
+      .pm-name-en { position:static; top:auto; left:auto; z-index:auto; margin:2px 0 0; text-align:center;
+        color:rgba(30,40,20,.22); font-size: clamp(22px,7vw,40px); }
       .pm-career { order:3; }
       .pm-iv-inner { grid-template-columns: 1fr; gap: 20px; }
       .pm-iv-quote p { writing-mode: horizontal-tb; font-size: clamp(22px,6vw,32px); line-height:1.7; }
