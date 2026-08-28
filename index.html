@@ -386,19 +386,23 @@
     }
 
     // メニューのPROJECTは、黒画面で止まらず筆文字が浮き出た位置まで移動
-    const scrollToProject = () => {
+    const scrollToProject = (smooth) => {
       const intro = document.querySelector('.wproject__intro');
       if (!intro) { const p = document.getElementById('project'); if (p) p.scrollIntoView(); return; }
       const vh = window.innerHeight;
-      const introH = intro.offsetHeight;
-      const introTop = intro.getBoundingClientRect().top + window.scrollY;
-      const target = introTop + 0.7 * Math.max(introH - vh, 1);
-      window.scrollTo({ top: target, behavior: 'smooth' });
+      const target = intro.getBoundingClientRect().top + window.scrollY + 0.7 * Math.max(intro.offsetHeight - vh, 1);
+      const html = document.documentElement, prev = html.style.scrollBehavior;
+      if (!smooth) html.style.scrollBehavior = 'auto';
+      window.scrollTo({ top: target, behavior: smooth ? 'smooth' : 'auto' });
+      html.style.scrollBehavior = prev;
     };
     document.querySelectorAll('a[href="#project"]').forEach(a => {
-      a.addEventListener('click', (ev) => { ev.preventDefault(); scrollToProject(); history.replaceState(null, '', '#project'); });
+      a.addEventListener('click', (ev) => { ev.preventDefault(); history.replaceState(null, '', '#project'); scrollToProject(true); });
     });
-    if (location.hash === '#project') { setTimeout(scrollToProject, 90); }
+    if (location.hash === '#project') {
+      const go = () => scrollToProject(false);
+      requestAnimationFrame(go); setTimeout(go, 250); setTimeout(go, 650);
+    }
   </script>
   <!-- WAKABA PROJECT 賛同企業 固定リンク -->
   <a class="pj-fab" href="#project" aria-label="WAKABA PROJECT 賛同企業はこちら">
